@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './styles/register.module.css'
+import styles from './styles/Register.module.css'
 const Register = () => {
     return (
         <div>Register</div>

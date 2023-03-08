@@ -5,6 +5,8 @@ import plans from './plans.svg'
 import members from './members.svg'
 import profile from './profile.svg'
 import navLogo from './navLogo.svg'
+import googleLogin from './googleLogin.svg'
+import loginHero from './loginHero.png'
 
 export {
     dashboard,
@@ -14,4 +16,7 @@ export {
     members,
     profile,
     navLogo,
+    googleLogin,
+    loginHero,
+
 }

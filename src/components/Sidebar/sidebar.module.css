@@ -107,6 +107,7 @@
   flex: none;
   order: 0;
   flex-grow: 0;
+  white-space: nowrap;
 }
 
 /* nav logos */
@@ -119,8 +120,8 @@
   flex-grow: 0;
 }
 /* nav link titles */
-.nav-item > h3 {
-  width: 120px;
+.nav_item h3 {
+  width: 80px;
   height: 23px;
 
   font-family: "DM Sans";
@@ -139,7 +140,6 @@
   order: 1;
   flex-grow: 0;
 }
-
 /* Style Active Link */
 /* .nav_links > li.active {
   color: #ff8d24;

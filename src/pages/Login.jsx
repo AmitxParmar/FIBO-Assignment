@@ -1,8 +1,16 @@
 import React from 'react'
 import styles from './styles/Login.module.css'
-import loginHero from '../assets/loginHero.png'
+import { useGoogleLogin } from '@react-oauth/google';
+
+import { loginHero, googleLogin } from '../assets'
 
 const Login = () => {
+    const handleLogin = () => {
+        useGoogleLogin({
+            onSuccess: tokenResponse => console.log(tokenResponse),
+        })
+    }
+
     return (<>
         <div className={styles.container}>
             <div className={styles.leftRect}>
@@ -18,8 +26,9 @@ const Login = () => {
             </div>
             <div className={styles.loginContainer}>
                 <div className={styles.loginForm}>
-
                     <input type='number' />
+                    <img src={googleLogin} onClick={() => handleLogin()} />
+
                 </div>
             </div>
         </div>

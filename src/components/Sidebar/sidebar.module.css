@@ -4,6 +4,145 @@
   height: 100dvh;
   left: 0px;
   top: 0px;
+  overflow: hidden;
 
   background: #272727;
 }
+/* Items inside main sidebar container */
+.container > .items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 82px;
+
+  position: absolute;
+  width: 162px;
+  height: 551px;
+  left: 42px;
+  top: 63px;
+}
+
+.logos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 28px;
+
+  width: 123px;
+  height: 125px;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* FITNESS LOGO INSIDE LOGOS CONTAINER */
+
+.logos > h2 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26.88px;
+  line-height: 30px;
+  /* or 113% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+/* FITNESS TEXT LOGO */
+.logos > h2 > span {
+  color: #ff8d24;
+}
+
+.logos > img {
+  width: 74.25px;
+  height: 72px;
+
+  border-radius: 16.875px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.nav_links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 40px;
+
+  width: 162px;
+  height: 344px;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.nav_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 18px;
+
+  width: 135px;
+  height: 24px;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* nav logos */
+.nav_item > img {
+  width: 24px;
+  height: 24px;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+/* nav link titles */
+.nav-item > h3 {
+  width: 120px;
+  height: 23px;
+
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.01em;
+
+  color: #a3a3a3;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Style Active Link */
+/* .nav_links > li.active {
+  color: #ff8d24;
+  font-weight: 700;
+}
+ */

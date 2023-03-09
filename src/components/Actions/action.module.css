@@ -1,0 +1,82 @@
+.container {
+  width: 219.84px;
+  height: 184.29px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.icon {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 12.7841px;
+  gap: 12.78px;
+
+  width: 45px;
+  height: 45px;
+
+  background: rgba(255, 141, 36, 0.45);
+  backdrop-filter: blur(2px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 30.2272px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.background {
+  position: absolute;
+  width: 219.84px;
+  height: 170px;
+  left: 0px;
+  top: 14.29px;
+
+  background: #2d2d2d;
+  border-radius: 13.1902px;
+}
+
+.container > h4 {
+  color: white;
+  fill: white;
+}
+
+.actionTitle {
+  width: 120px;
+  height: 25px;
+  white-space: nowrap;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height, or 135% */
+
+  letter-spacing: 0.01em;
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 42px;
+  position: relative;
+  width: 150.35px;
+  height: 112px;
+  left: 35.17px;
+  top: 0px;
+}

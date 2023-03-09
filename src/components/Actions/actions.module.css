@@ -1,0 +1,60 @@
+.container {
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+
+  position: absolute;
+  width: 923px;
+  height: 231.29px;
+  left: 307px;
+  top: 573px;
+}
+.actionTitle {
+  width: 121px;
+  height: 31px;
+  white-space: nowrap;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 31px;
+  /* identical to box height, or 171% */
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 14.55px;
+
+  width: 923px;
+  height: 184.29px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.link {
+  width: 219.84px;
+  height: 184.29px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}

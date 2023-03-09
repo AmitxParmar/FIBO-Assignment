@@ -1,11 +1,13 @@
-import { plans } from './assets'
-import { dashboard, dietPlans, members, logout, profile } from './assets'
+import { dashboard, plans, dietPlans, members, logout, profile } from './assets'
+import { addMembers, manageStaffs, setupGymBranch, manageSubscription } from './assets/QuickActions'
+
+
 export const nav_links = [
     {
         id: '23d23',
         name: "Dashboard",
         icon: dashboard,
-        path: "/"
+        path: "/dashboard"
     },
     {
         id: '234vc',
@@ -36,4 +38,22 @@ export const nav_links = [
         name: "Logout",
         icon: logout
     },
+]
+
+export const quick_actions = [{
+    title: "Add Members",
+    icon: addMembers
+},
+{
+    title: "Manage Staffs",
+    icon: manageStaffs
+},
+{
+    title: "Set Up Gym branch",
+    icon: setupGymBranch
+},
+{
+    title: "Manage Subscription Plans",
+    icon: manageSubscription
+}
 ]

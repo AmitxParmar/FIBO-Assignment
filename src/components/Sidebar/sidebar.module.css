@@ -1,15 +1,18 @@
 .container {
   position: absolute;
-  width: 260px;
-  height: 100dvh;
+  max-width: 260px;
+  width: 100%;
+  height: 100%;
+  min-height: 832px;
   left: 0px;
   top: 0px;
   overflow: hidden;
 
   background: #272727;
 }
+
 /* Items inside main sidebar container */
-.container > .items {
+.items {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,17 +51,12 @@
   font-size: 26.88px;
   line-height: 30px;
   /* or 113% */
-
   display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
   color: #ffffff;
-
-  /* Inside auto layout */
-
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -71,37 +69,31 @@
 .logos > img {
   width: 74.25px;
   height: 72px;
-
   border-radius: 16.875px;
-
   flex: none;
   order: 0;
   flex-grow: 0;
 }
-
+/* NAV link conntainer */
 .nav_links {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
   gap: 40px;
-
-  width: 162px;
+  min-width: 162px;
   height: 344px;
   /* Inside auto layout */
   flex: none;
   order: 1;
   flex-grow: 0;
 }
-
+/* Single link styles */
 .nav_item {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
+  align-items: flex-start;
   gap: 18px;
-
-  width: 135px;
+  width: fit-content;
   height: 24px;
   /* Inside auto layout */
   flex: none;
@@ -109,9 +101,15 @@
   flex-grow: 0;
   white-space: nowrap;
 }
+.items > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 200px;
+}
 
 /* nav logos */
-.nav_item > img {
+.navIcons {
   width: 24px;
   height: 24px;
   /* Inside auto layout */
@@ -120,10 +118,12 @@
   flex-grow: 0;
 }
 /* nav link titles */
-.nav_item h3 {
+.navTitle {
+  position: relative;
   width: 80px;
   height: 23px;
-
+  align-items: flex-start;
+  display: flex;
   font-family: "DM Sans";
   font-style: normal;
   font-weight: 400;
@@ -135,11 +135,14 @@
   color: #a3a3a3;
 
   /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
 }
+.nav_item:hover {
+  cursor: pointer;
+  color: #ff8d24;
+}
+
+/* .heading {
+} */
 /* Style Active Link */
 /* .nav_links > li.active {
   color: #ff8d24;

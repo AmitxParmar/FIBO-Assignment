@@ -128,6 +128,7 @@
 }
 /* Login Heading */
 .hug {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -149,15 +150,53 @@
   display: grid;
   grid-template-columns: 1fr;
 }
+.inputContainer {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 65.52%;
 
-.loginForm > label > input {
+  width: 355px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  background: #333333;
+  border-radius: 11.6154px;
+}
+.inputContainer > span {
+  width: 26px;
+  height: 31px;
+
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13.5513px;
+  line-height: 33px;
+  /* or 243% */
+
+  letter-spacing: 0.01em;
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+#number_login > input {
   width: 355px;
   height: 50px;
   flex: none;
   all: unset;
   order: 0;
   flex-grow: 0;
-  color: green;
+}
+#number_login > label {
 }
 /* Style-input */
 .loginForm > label {
@@ -179,30 +218,6 @@
   border-radius: 11.6154px;
 }
 
-.loginForm > label > span {
-  width: 26px;
-  height: 31px;
-
-  font-family: "DM Sans";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 13.5513px;
-  line-height: 33px;
-  /* or 243% */
-  letter-spacing: 0.01em;
-
-  color: #ffffff;
-  display: flex;
-  flex-direction: row;
-  justify-items: center;
-  justify-content: center;
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
 /* input border */
 .divider {
   width: 18.75px;
@@ -219,17 +234,14 @@
 }
 
 input {
-  text-decoration: none;
-  border: none;
-  background-color: none;
-  outline: none;
   all: unset;
 }
 
 /* Login Button */
 .loginBtn {
   box-sizing: border-box;
-
+  width: 355px;
+  height: 50px;
   position: absolute;
   left: 0%;
   right: 0%;
@@ -249,15 +261,12 @@ input {
   width: 355px;
   height: 310.92px;
 
-  /* Inside auto layout */
-
   flex: none;
   order: 1;
   flex-grow: 0;
 }
 
-.loginBtn p {
-  position: relative;
+.loginBtn > p {
   left: 26.2%;
   right: 26.2%;
   top: 75.86%;
@@ -301,8 +310,32 @@ input::placeholder {
   order: 2;
   flex-grow: 0;
 }
+.content > .heading {
+  width: 272px;
+  height: 30px;
+
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 23.2308px;
+  line-height: 19px;
+  /* or 83% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
 
 .loginForm {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;

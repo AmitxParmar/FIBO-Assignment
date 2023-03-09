@@ -10,14 +10,15 @@ import { loginHero, googleLogin } from '../assets'
 const Login = () => {
 
     const { login, userData } = useUser()
+    console.log({ login, userData })
+
     const [user, setUser] = useState([]);
     const [profile, setProfile] = useState([]);
 
     useEffect(
         () => {
 
-        }, []
-    );
+        }, []);
 
     return (
         <div className={styles.container}>
@@ -34,24 +35,29 @@ const Login = () => {
             </div>
             <div className={styles.loginContainer}>
                 <div className={styles.loginForm}>
+                    {/* Hug */}
                     <div className={styles.hug}>
                         <h3 className={styles.heading}>Login to your Account</h3>
                         <h5 className={styles.motto}>Your Own Digital Campaign</h5>
                     </div>
+
                     <div className={styles.number_login}>
 
                         {/* Number Input */}
-                        <label htmlFor='number-input' >
-                            <span>+91
-                                <div className={styles.divider}></div>
-                            </span>
+                        <div className={styles.inputContainer}>
+                            <span>+91</span>
+                            <div className={styles.divider}></div>
                             <input id="number-input" name='number' type='number' placeholder='mobile number' className={styles.input} />
-                        </label>
+                        </div>
 
                         {/* Login Button */}
                         <label className={styles.loginBtn} htmlFor='submit'><p>Login to Your Account</p></label>
-                        <button type='button' onClick={() => login()} />
-                        <img src={googleLogin} className={styles.img} />
+                        <button id='submit' type='button' />
+
+                        <button className={styles.googleLogin} onClick={() => login()}>
+                            <img src={googleLogin} className={styles.img} />
+                            GoogleLogin
+                        </button>
                     </div>
                 </div>
             </div>

@@ -41,19 +41,22 @@ export const nav_links = [
 ]
 
 export const quick_actions = [{
+    id: 'xq9wb8',
     title: "Add Members",
     icon: addMembers
 },
 {
+    id: 'xq9w3db8',
     title: "Manage Staffs",
     icon: manageStaffs
 },
 {
+    id: "d32d34",
     title: "Set Up Gym branch",
     icon: setupGymBranch
 },
 {
+    id: "dce34",
     title: "Manage Subscription Plans",
     icon: manageSubscription
-}
-]
+}]

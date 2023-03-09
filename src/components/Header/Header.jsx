@@ -2,8 +2,10 @@ import React from 'react'
 import styles from './Header.module.css'
 
 import notification from './../../assets/notification.svg'
+import { useUser } from '../../context/user_context'
 
 const Header = () => {
+    const { userData } = useUser();
     return (
         <div className={styles.container}>
             <div className={styles.heading}>
@@ -12,7 +14,7 @@ const Header = () => {
             </div>
             <div className={styles.notification_profile}>
                 <img src={notification} className={styles.notificationIcon} />
-                <img className={styles.userProfile} /> {/* TODO: User Profile Pic */}
+                <img className={styles.userProfile} src={userData.picture} /> {/* TODO: User Profile Pic */}
             </div>
         </div>
     )

@@ -18,6 +18,7 @@ const Login = () => {
             login();
             setLoading(false)
             setIsAuthenticated(true)
+            navigate("/dashboard")
         } catch (e) {
             console.log(e.message)
             setLoading(false)
@@ -81,13 +82,6 @@ const Login = () => {
                         {/* GOOGLE LOGIN BUTTON */}
                         <img src={googleLogin} className={styles.googleLoginLogo} onClick={() => handleLogin()} />
                     </div>
-
-
-
-
-
-
-
                 </div>
             </div>
         </div>

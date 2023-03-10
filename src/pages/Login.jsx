@@ -22,7 +22,7 @@ const Login = () => {
     }
 
     useEffect(() => {
-        isAuthenticated ? <Navigate to="/dashboard" /> : null;
+        isAuthenticated ? navigate("/dashboard") : null;
     }, [])
 
 
@@ -63,7 +63,9 @@ const Login = () => {
                         </div>
 
                         {/* Login Button */}
-                        <label className={styles.loginBtn} htmlFor='submit'><p>Login to Your Account</p></label>
+                        <label className={styles.loginBtn} htmlFor='submit'>
+                            <p>Login to Your Account</p>
+                        </label>
                         <button id='submit' type='button' />
 
                         {/* OPTIONAL LOGIN */}

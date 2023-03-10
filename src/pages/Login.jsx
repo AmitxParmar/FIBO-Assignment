@@ -10,19 +10,21 @@ import { loginHero, googleLogin, navLogo } from '../assets'
 const Login = () => {
     const navigate = useNavigate()
 
-    const { login, loading, isAuthenticated } = useUser()
+    const { login, loading, setLoading, isAuthenticated } = useUser()
 
     const handleLogin = () => {
         try {
+            setLoading(true)
             login();
-
+            setLoading(false)
         } catch (e) {
             console.log(e.message)
+            setLoading(false)
         }
     }
 
     useEffect(() => {
-        isAuthenticated ? navigate("/dashboard") : null;
+        isAuthenticated && !loading ? navigate("/dashboard") : null;
     }, [])
 
 

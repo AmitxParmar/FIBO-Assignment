@@ -34,12 +34,13 @@ export const UserProvider = ({ children }) => {
             } catch (err) {
                 console.log(err)
                 isAuthenticated(false)
+                setLoading(false)
             }
         }
     });
 
     return (
-        <UserContext.Provider value={{ isAuthenticated, userData: user, login, loading }}>
+        <UserContext.Provider value={{ isAuthenticated, userData: user, login, loading, setLoading }}>
             {children}
         </UserContext.Provider>
     )

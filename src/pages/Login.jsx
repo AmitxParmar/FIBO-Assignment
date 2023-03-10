@@ -8,22 +8,24 @@ import { loginHero, googleLogin } from '../assets'
 
 
 const Login = () => {
+    const navigate = useNavigate()
 
-    const { login, userData } = useUser()
-    console.log({ login, userData })
+    const { login, userData, loading } = useUser()
 
-    const [user, setUser] = useState([]);
-    const [profile, setProfile] = useState([]);
+    const handleLogin = () => {
+        try {
+            login();
+            if (!loading) navigate("/dashboard")
+        } catch (e) {
+            console.log(e.message)
+        }
+    }
 
-    useEffect(
-        () => {
-
-        }, []);
 
     return (
         <div className={styles.container}>
-            <div className={styles.leftRect}>
-            </div>
+            <img className={styles.imgMobile} />
+            <div className={styles.leftRect} />
             <div className={styles.heroContainer}>
                 <img src={loginHero} />
                 <div className={styles.content}>
@@ -53,10 +55,15 @@ const Login = () => {
                         {/* Login Button */}
                         <label className={styles.loginBtn} htmlFor='submit'><p>Login to Your Account</p></label>
                         <button id='submit' type='button' />
-
-                        <button className={styles.googleLogin} onClick={() => login()}>
-                            <img src={googleLogin} className={styles.img} />
-                            GoogleLogin
+                        {/* OPTIONAL LOGIN */}
+                        <div className={styles.orContainer}>
+                            <div className={styles.line1} />
+                            <span>OR</span>
+                            <div className={styles.line2} />
+                        </div>
+                        {/* GOOGLE LOGIN BUTTON */}
+                        <img src={googleLogin} className={styles.img} />
+                        <button className={styles.googleLogin} onClick={() => handleLogin()}>
                         </button>
                     </div>
                 </div>

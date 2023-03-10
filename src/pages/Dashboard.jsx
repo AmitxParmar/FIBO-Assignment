@@ -17,7 +17,6 @@ const Dashboard = () => {
         <div className={styles.dashboard}>
             <Sidebar />
             <div className={styles.rightPanel}>
-
                 <Header />
                 <Actions />
             </div>

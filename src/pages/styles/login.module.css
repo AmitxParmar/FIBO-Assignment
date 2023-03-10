@@ -19,6 +19,10 @@
 
   background: #212121;
 }
+.imgMobile {
+  display: none;
+  background-image: url("../../../assets/loginImageMobile.jpeg");
+}
 
 .heroContainer {
   display: flex;
@@ -409,4 +413,98 @@ input::placeholder {
 .img {
   height: fit-content;
   width: fit-content;
+}
+
+/* OPTIONAL LOGIN */
+.line1 {
+  width: 69px;
+  height: 0px;
+
+  border: 0.483974px solid #5b5b5b;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.line2 {
+  width: 69px;
+  height: 0px;
+
+  border: 0.483974px solid #5b5b5b;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+
+.orContainer {
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 12px;
+
+  width: 182px;
+  height: 33px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.orContainer > span {
+  width: 20px;
+  height: 33px;
+
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13.5513px;
+  line-height: 33px;
+  /* identical to box height, or 243% */
+
+  letter-spacing: 0.01em;
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* MOBILE DEVICES */
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+    display: flex;
+  }
+  .leftRect {
+    display: none;
+  }
+  .heroContainer {
+    display: none;
+  }
+  .imgMobile {
+    position: absolute;
+    width: 360px;
+    height: 517px;
+    left: 0px;
+    top: 0px;
+
+    background: linear-gradient(
+      180deg,
+      rgba(47, 45, 45, 0.6) 0%,
+      rgba(30, 28, 27, 0.6) 100%
+    );
+  }
 }

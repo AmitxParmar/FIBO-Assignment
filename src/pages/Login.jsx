@@ -10,13 +10,14 @@ import { loginHero, googleLogin, navLogo } from '../assets'
 const Login = () => {
     const navigate = useNavigate()
 
-    const { login, loading, setLoading, isAuthenticated } = useUser()
+    const { login, loading, setLoading, isAuthenticated, setIsAuthenticated } = useUser()
 
     const handleLogin = () => {
         try {
             setLoading(true)
             login();
             setLoading(false)
+            setIsAuthenticated(true)
         } catch (e) {
             console.log(e.message)
             setLoading(false)
@@ -24,7 +25,7 @@ const Login = () => {
     }
 
     useEffect(() => {
-        isAuthenticated && !loading ? navigate("/dashboard") : null;
+        isAuthenticated && navigate("/dashboard");
     }, [])
 
 
@@ -65,22 +66,27 @@ const Login = () => {
                         </div>
 
                         {/* Login Button */}
-                        <label className={styles.loginBtn} htmlFor='submit'>
-                            <p>Login to Your Account</p>
-                        </label>
-                        <button id='submit' type='button' />
-
+                        <div >
+                            <label htmlFor='submit' className={styles.loginBtn}>
+                                <p>Login to Your Account</p>
+                            </label>
+                            <button id='submit' type='button' />
+                        </div>
                         {/* OPTIONAL LOGIN */}
                         <div className={styles.orContainer}>
                             <div className={styles.line1} />
                             <span>OR</span>
                             <div className={styles.line2} />
                         </div>
-
                         {/* GOOGLE LOGIN BUTTON */}
-                        <img src={googleLogin} className={styles.googleLoginLogo} onClick={() => login()} />
-
+                        <img src={googleLogin} className={styles.googleLoginLogo} onClick={() => handleLogin()} />
                     </div>
+
+
+
+
+
+
 
                 </div>
             </div>

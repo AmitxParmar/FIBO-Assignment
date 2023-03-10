@@ -11,7 +11,7 @@ export const UserProvider = ({ children }) => {
     const [loading, setLoading] = useState(false);
     const getAuth = () => localStorage.getItem("userinfo") ? setIsAuthenticated(true) : setIsAuthenticated(false);
     useEffect(() => {
-        if (user) redirect("/dashboard")
+        if (isAuthenticated) redirect("/dashboard")
     }, []);
 
     const login = useGoogleLogin({
@@ -27,11 +27,13 @@ export const UserProvider = ({ children }) => {
                         localStorage.setItem("userinfo", JSON.stringify(res.data));
 
                         setUser(res.data)
+                        setIsAuthenticated(true)
                         setLoading(false)
                         console.log(res.data)
                     })
             } catch (err) {
                 console.log(err)
+                isAuthenticated(false)
             }
         }
     });

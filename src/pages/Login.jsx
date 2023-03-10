@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useGoogleLogin } from '@react-oauth/google';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Navigate } from 'react-router-dom'
 import { useUser } from '../context/user_context'
 
 import styles from './styles/Login.module.css'
@@ -10,16 +10,20 @@ import { loginHero, googleLogin, navLogo } from '../assets'
 const Login = () => {
     const navigate = useNavigate()
 
-    const { login, loading } = useUser()
+    const { login, loading, isAuthenticated } = useUser()
 
     const handleLogin = () => {
         try {
             login();
-            if (!loading) navigate("/dashboard")
+
         } catch (e) {
             console.log(e.message)
         }
     }
+
+    useEffect(() => {
+        isAuthenticated ? <Navigate to="/dashboard" /> : null;
+    }, [])
 
 
     return (

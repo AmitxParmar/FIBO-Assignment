@@ -4,13 +4,13 @@ import { useNavigate } from 'react-router-dom'
 import { useUser } from '../context/user_context'
 
 import styles from './styles/Login.module.css'
-import { loginHero, googleLogin } from '../assets'
+import { loginHero, googleLogin, navLogo } from '../assets'
 
 
 const Login = () => {
     const navigate = useNavigate()
 
-    const { login, userData, loading } = useUser()
+    const { login, loading } = useUser()
 
     const handleLogin = () => {
         try {
@@ -36,6 +36,12 @@ const Login = () => {
                 </div>
             </div>
             <div className={styles.loginContainer}>
+                {/* LOGIN LOGO CONTAINER */}
+                <div className={styles.loginLogos}>
+                    <img className={styles.loginLogo} src={navLogo} />
+                    <h3 className={styles.loginTextLogo}>FI<span>T</span>NESS</h3>
+                </div>
+                {/* LOGIN FORM */}
                 <div className={styles.loginForm}>
                     {/* Hug */}
                     <div className={styles.hug}>
@@ -48,24 +54,26 @@ const Login = () => {
                         {/* Number Input */}
                         <div className={styles.inputContainer}>
                             <span>+91</span>
-                            <div className={styles.divider}></div>
+                            <div className={styles.divider} />
                             <input id="number-input" name='number' type='number' placeholder='mobile number' className={styles.input} />
                         </div>
 
                         {/* Login Button */}
                         <label className={styles.loginBtn} htmlFor='submit'><p>Login to Your Account</p></label>
                         <button id='submit' type='button' />
+
                         {/* OPTIONAL LOGIN */}
                         <div className={styles.orContainer}>
                             <div className={styles.line1} />
                             <span>OR</span>
                             <div className={styles.line2} />
                         </div>
+
                         {/* GOOGLE LOGIN BUTTON */}
-                        <img src={googleLogin} className={styles.img} />
-                        <button className={styles.googleLogin} onClick={() => handleLogin()}>
-                        </button>
+                        <img src={googleLogin} className={styles.googleLoginLogo} onClick={() => login()} />
+
                     </div>
+
                 </div>
             </div>
         </div>

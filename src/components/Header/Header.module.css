@@ -93,6 +93,7 @@
   height: 23.33px;
   left: 4.08px;
   top: 2.33px;
+  cursor: pointer;
 }
 
 .userProfile {
@@ -100,6 +101,7 @@
   height: 36px;
   border-radius: 50%;
   margin: 10px;
+  cursor: pointer;
 
   background: #d9d9d9;
 

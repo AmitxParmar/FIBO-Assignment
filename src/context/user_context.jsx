@@ -7,8 +7,9 @@ const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
     const [user, setUser] = useState(JSON.parse(localStorage.getItem("userinfo")));
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [loading, setLoading] = useState(false);
-
+    const getAuth = () => localStorage.getItem("userinfo") ? setIsAuthenticated(true) : setIsAuthenticated(false);
     useEffect(() => {
         if (user) redirect("/dashboard")
     }, []);
@@ -36,7 +37,7 @@ export const UserProvider = ({ children }) => {
     });
 
     return (
-        <UserContext.Provider value={{ userData: user, login, loading }}>
+        <UserContext.Provider value={{ isAuthenticated, userData: user, login, loading }}>
             {children}
         </UserContext.Provider>
     )
